@@ -27,7 +27,9 @@ public class TestUser {
 	
 	@Autowired
 	private SessionFactory factory;
+	
 	private Session session;
+	
 	private Transaction tx;
 
 	@Before
