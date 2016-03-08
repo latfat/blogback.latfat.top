@@ -1,7 +1,6 @@
 package top.latfat.blogback.service.impl;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -24,23 +23,25 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 	
 	protected Result result = new Result(0, "Faild", null);
   
-    public void save(T entity) {  
-        dao.save(entity);  
+    public Result save(T entity) {  
+        return result.setAll(1, "Done", dao.save(entity));  
     }  
   
-    public void update(T entity) {  
-        dao.update(entity);  
+    public Result update(T entity) {  
+        dao.update(entity);
+        return result.setAll(1, "Done", null);
     }  
   
-    public void delete(Serializable id) {  
+    public Result delete(Serializable id) {  
         dao.delete(id);  
+        return result.setAll(1, "Done", null);
     }  
   
-    public T getById(Serializable id) {  
-        return dao.findById(id);  
+    public Result getById(Serializable id) {  
+        return result.setAll(1, "Done", dao.findById(id));  
     }  
   
-    public List<T> getByHQL(String hql, Object... params) {  
-        return dao.findByHQL(hql, params);  
+    public Result getByHQL(String hql, Object... params) {  
+        return result.setAll(1, "Done", dao.findByHQL(hql, params));  
     }  
 }  

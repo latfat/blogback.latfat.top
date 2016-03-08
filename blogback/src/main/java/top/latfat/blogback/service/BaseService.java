@@ -1,22 +1,22 @@
 package top.latfat.blogback.service;
 
-import java.io.Serializable;  
-import java.util.List;  
+import top.latfat.blogback.entity.Result;
   
 /** 
  * BaseService 
  *  
+ *  通用服务放在此
  * @author sean 
  */  
 public interface BaseService<T> {  
   
-    public void save(T entity);  
+    public Result save(T entity);  
   
-    public void update(T entity);  
+    public Result update(T entity);  
   
-    public void delete(Serializable id);  
+    public Result delete(java.io.Serializable id);  
   
-    public T getById(Serializable id);  
+    public Result getById(java.io.Serializable id);  
   
-    public List<T> getByHQL(String hql, Object... params);  
+    public Result getByHQL(String hql, Object... params);  
 }
