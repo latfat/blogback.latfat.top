@@ -7,7 +7,11 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-
+/**
+ * 用户
+ * @author xiaochen@inshn
+ *
+ */
 @SuppressWarnings("serial")
 @Entity
 @Table(name="user", catalog="blog")

@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import top.latfat.blogback.entity.User;
 import top.latfat.blogback.service.UserService;
-
+/**
+ * 测试用
+ * @author xiaochen@inshn
+ *
+ */
 @Controller
 public class Main {
 	

@@ -6,11 +6,13 @@ import java.util.List;
 /** 
  * BaseDAO 
  *  
+ *  公用方法方在此处
+ *  
  * @author sean 
  */  
 public interface BaseDao<T> {  
   
-    public void save(T entity);  
+    public Serializable save(T entity);  
   
     public void update(T entity);  
   
