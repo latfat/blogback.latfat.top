@@ -63,10 +63,10 @@ public class TestUser {
 	@Test
 	public void test1() {
 		User user = new User("asdasd", "tututu");
+		System.out.println(user.getId());
 		java.io.Serializable id = session.save(user);
 		System.out.println("session save test: " + id);
 	}
-	
 	
 	@Test
 	public void test0() {

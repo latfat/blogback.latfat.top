@@ -9,4 +9,6 @@ import top.latfat.blogback.entity.User;
  */
 public interface UserDao extends BaseDao<User> {
 
+	User findByName(String name);
+
 }

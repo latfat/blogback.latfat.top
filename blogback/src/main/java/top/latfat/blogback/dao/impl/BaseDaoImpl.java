@@ -53,9 +53,9 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     }  
   
     public List<T> findByHQL(String hql, Object... params) {  
-        Query query = this.getSession().createQuery(hql);  
+        Query query = this.getSession().createQuery(hql);
         for (int i = 0; params != null && i < params.length; i++) {  
-            query.setParameter(i, params);  
+            query.setParameter(i, params[i]);
         }  
         return query.list();  
     }  
